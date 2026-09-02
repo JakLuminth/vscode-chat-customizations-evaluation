@@ -49,8 +49,8 @@ class ExtensionRuntime {
       'Chat Customizations Evaluations',
       { log: true },
     );
+    context.subscriptions.push(this.outputChannel);
     const serverOptions = this.createServerOptions(context);
-    const clientOptions = this.createClientOptions();
     this.client = new LanguageClient(
       'chatCustomizationsEvaluations',
       'Chat Customizations Evaluations',
